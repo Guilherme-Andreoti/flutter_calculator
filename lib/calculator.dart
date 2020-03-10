@@ -117,7 +117,7 @@ class _CalcuatorState extends State<Calcuator> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               _buildKeyboardButton('0',flex: 2),
-              _buildKeyboardButton('-'),
+              _buildKeyboardButton('.'),
               _buildKeyboardButton('=', textColor: Colors.red),
             ],
           )),
