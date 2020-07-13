@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
           fontSize: 20.0
         ),
       ),
-      image: new Image.network('https://i.imgur.com/TyCSG9A.png'),
+      image: new Image.network('https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png'),
       backgroundColor: Colors.black,
       styleTextUnderTheLoader: new TextStyle(),
       photoSize: 100.0,
