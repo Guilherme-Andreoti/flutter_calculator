@@ -40,7 +40,7 @@ class _CalcuatorState extends State<Calcuator> {
           maxLines: 1,
           minFontSize: 20,
           maxFontSize: 80,
-          style: TextStyle(fontSize: 80, color: Colors.black),
+          style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
         ),
       ),
     );
