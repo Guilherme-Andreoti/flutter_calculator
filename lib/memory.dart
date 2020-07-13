@@ -8,6 +8,7 @@ class Memory {
   int _bufferIndex = 0; 
   bool _operationUsed = false;
   String _operation = null;  
+  String history = '';
 
   void applyCommand(String label) {
     switch (label) {
@@ -30,6 +31,20 @@ class Memory {
       } 
 
     }
+
+    if (_operation != null){
+      if (_buffer[1].toString()!=''){
+        history = _buffer[0].toString() + _operation + _buffer[1].toString();  
+      }else
+      {
+        history = _buffer[0].toString() + _operation;  
+      }
+     
+    }else{
+      history = _buffer[0].toString(); 
+    }
+
+    
   }
 
   _addDigit(String digit){
@@ -44,7 +59,9 @@ class Memory {
 
     result += digit;
     _buffer[_bufferIndex] = double.parse(result);
-    _operationUsed = false; 
+    _operationUsed = false;
+
+    
   }
 
   _setOperation(operacao){
@@ -68,10 +85,12 @@ class Memory {
     }
 
     // _operation = operacao;  
+    
   }
 
   _clear() {
     result = '0';
+    history = '';
     _buffer.setAll(0,[0.0,0.0]); 
     _bufferIndex = 0; 
     _operationUsed = false; 

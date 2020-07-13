@@ -33,16 +33,31 @@ class _CalcuatorState extends State<Calcuator> {
   _buildDisplay() {
    
     return Expanded(
-      child: Container(
-        child: AutoSizeText(
-          memory.result,
-          textAlign: TextAlign.end,
-          maxLines: 1,
-          minFontSize: 20,
-          maxFontSize: 80,
-          style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
-        ),
-      ),
+      
+      child: Column(
+        children: <Widget>[
+          Container(
+            child: AutoSizeText(
+              memory.history,
+              textAlign: TextAlign.end,
+              maxLines: 1,
+              minFontSize: 20,
+              maxFontSize: 20,
+              style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
+            ),
+          ),
+            Container(
+            child: AutoSizeText(
+              memory.result,
+              textAlign: TextAlign.end,
+              maxLines: 1,
+              minFontSize: 20,
+              maxFontSize: 80,
+              style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
+            ),
+          ),
+        ]
+      )
     );
   }
 
