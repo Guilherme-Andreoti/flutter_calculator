@@ -1,6 +1,7 @@
 import 'package:calculator/memory.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:share/share.dart';
 
 class Calcuator extends StatefulWidget {
   @override
@@ -14,8 +15,16 @@ class _CalcuatorState extends State<Calcuator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('A Calculator'),
+        title: Text('Calculadora'),
         backgroundColor: Colors.red,
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.share),
+              onPressed: (){
+                Share.share('Essa calculadora mt boa não está disponível para o Google Play :(');
+              },
+          ),
+        ]
+        
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
