@@ -48,20 +48,20 @@ class _CalcuatorState extends State<Calcuator> {
           Container(
             child: AutoSizeText(
               memory.history,
-              textAlign: TextAlign.end,
+              textAlign: TextAlign.left,
               maxLines: 1,
               minFontSize: 20,
-              maxFontSize: 20,
+              maxFontSize: 40,
               style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
             ),
           ),
             Container(
             child: AutoSizeText(
               memory.result,
-              textAlign: TextAlign.end,
+              textAlign: TextAlign.right,
               maxLines: 1,
               minFontSize: 20,
-              maxFontSize: 80,
+              maxFontSize: 90,
               style: TextStyle( fontFamily: 'Calculator', fontSize: 80, color: Colors.black),
             ),
           ),
